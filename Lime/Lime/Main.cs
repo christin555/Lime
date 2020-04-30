@@ -45,6 +45,7 @@ namespace Lime
         { 
             this.Hide();
             Directory directory = new Directory(name);
+            directory.WindowState = FormWindowState.Maximized;
             directory.FormClosed += (object s, FormClosedEventArgs ev) => { this.Show(); };
             directory.Show();
           
