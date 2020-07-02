@@ -45,7 +45,6 @@ namespace Lime
         { 
             this.Hide();
             Directory directory = new Directory(name);
-            directory.WindowState = FormWindowState.Maximized;
             directory.FormClosed += (object s, FormClosedEventArgs ev) => { this.Show(); };
             directory.Show();
           
@@ -59,6 +58,16 @@ namespace Lime
         private void справочникToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void навыкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openDirectory("skills");
+        }
+
+        private void проектыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openDirectory("projects");
         }
     }
 }
